@@ -1,0 +1,127 @@
+
+
+<!--<div class="t" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)">
+    hover me and see
+  
+</div>
+  <span [hidden]="isHidden" >this is foe experiment</span>-->
+    
+<div class="container">
+    <div class="row">
+        <div class="md-col-4" class="navButtons">
+            <button class="button button-primary" (click)=" goToBackStartDate()">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+            <span><strong>{{startDate}}</strong>{{startDateY}} -<strong>{{endDate}}</strong>{{endDateY}} </span>
+            <button class="button button-primary" (click)=" goToNextStartDate()">
+                 <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div  class="md-col-8 md-col-offset-2 dContainer">
+           <div class="row"> 
+                <div class="dayHead col-md-1">{{currDateDay[0]}}</div>
+                <div class="dayHead col-md-1">{{currDateDay[1]}}</div>
+                <div class="dayHead col-md-1">{{currDateDay[2]}}</div>
+                <div class="dayHead col-md-1">{{currDateDay[3]}}</div>
+                <div class="dayHead col-md-1">{{currDateDay[4]}}</div>
+                <div class="dayHead col-md-1">{{currDateDay[5]}}</div>
+                <div class="dayHead col-md-1">{{currDateDay[6]}}</div>
+           </div>     
+        </div>
+    </div>
+
+<!--days-->
+    <div class="row">
+        <div class="md-col-8 md-col-offset-2 dContainer">
+            <div class="row">
+                <div class="dayBlock col-md-1"  [class.notAvailable]="days[2].available" (mouseover)="isHidde=false" (mouseout)="isHidde=true">{{days[0].day}}
+                    <span class="month-of-day" [hidden]="isHidde">{{days[0].month}}</span>
+                    <span class="status-of-day" [hidden]="isHidde"></span>
+                </div>
+                <div class="dayBlock col-md-1"  [class.notAvailable]="days[2].available" (mouseover)="isHidde=false" (mouseout)="isHidde=true">{{days[1].day}}
+                    <span class="month-of-day" [hidden]="isHidde">{{days[0].month}}</span>
+                    <span class="status-of-day" [hidden]="isHidde"></span>
+                </div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[2].available" >{{days[2].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[3].available">{{days[3].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[4].available">{{days[4].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[5].available">{{days[5].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[6].available">{{days[6].day}}</div>
+            </div>    
+        </div>
+
+    </div>
+
+
+    <div class="row ">
+        <div class="md-col-8 md-col-offset-2 dContainer">
+            <div class="row">
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[7].available">{{days[7].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[8].available">{{days[8].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[9].available">{{days[9].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[10].available">{{days[10].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[11].available">{{days[11].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[12].available">{{days[12].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[13].available">{{days[13].day}}</div>
+            </div>    
+        </div>
+
+    </div>
+    
+    <div class="row">
+        <div class="md-col-8 md-col-offset-2 dContainer">
+            <div class="row">
+                <div class="dayBlock col-md-1" [class.notAvailable]="[days[14].available]">{{days[14].day}}
+                   
+                                        
+                </div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[15].available">{{days[15].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[16].available">{{days[16].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[17].available">{{days[17].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[18].available">{{days[18].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[19].available">{{days[19].day}}</div>
+                <div class="dayBlock col-md-1" [class.notAvailable]="days[20].available">{{days[20].day}}</div>
+            </div>    
+        </div>
+
+    </div>
+     <div class="row">
+        <div class="md-col-8 md-col-offset-2 dContainer">
+            <div class="row">
+                <div class="dayBlock col-md-1">{{days[21].day}}</div>
+                <div class="dayBlock col-md-1">{{days[22].day}}</div>
+                <div class="dayBlock col-md-1">{{days[23].day}}</div>
+                <div class="dayBlock col-md-1">{{days[24].day}}</div>
+                <div class="dayBlock col-md-1">{{days[25].day}}</div>
+                <div class="dayBlock col-md-1">{{days[26].day}}</div>
+                <div class="dayBlock col-md-1">{{days[27].day}}</div>
+            </div>    
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="md-col-8 md-col-offset-2 dContainer">
+            <div class="row">
+                <div class="dayBlock col-md-1">{{days[28].day}}</div>
+                <div class="dayBlock col-md-1">{{days[29].day}}</div>
+                <div class="dayBlock col-md-1">{{days[30].day}}</div>
+                <div class="dayBlock col-md-1">{{days[31].day}}</div>
+                <div class="dayBlock col-md-1">{{days[32].day}}</div>
+                <div class="dayBlock col-md-1">{{days[33].day}}</div>
+                <div class="dayBlock col-md-1">{{days[34].day}}</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+
+    
+
+</div>

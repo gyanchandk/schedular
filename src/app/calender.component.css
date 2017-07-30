@@ -1,0 +1,69 @@
+
+/*.dContainer{
+   display: flex;
+   flex-wrap: wrap;
+}*/
+.navButtons{
+    text-align: center;
+}
+.dayHead{
+      width: 120px;
+      height: 50px;
+      background-color: rgb(0, 102, 102);
+      color:whitesmoke;
+      font-size: 20px;
+      margin: 2px;
+      padding: 4px;
+      text-align:center; 
+}
+.dayBlock{
+   
+      width: 120px;
+      height: 50px;
+      background-color: whitesmoke;
+      color: rgb(0, 102, 102);
+      font-size: 20px;
+      margin: 2px;
+      padding: 4px;
+      text-align:center; 
+
+}
+
+.dayBlock:hover{
+    background-color: rgb(112,112,112);
+    color: whitesmoke;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip ,.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.redbg{
+    background-color: red;
+    visibility: hidden;
+}
+.notAvailable{
+    background-color: rgb(225, 225, 208)
+}
+
+    
+
+   
+
